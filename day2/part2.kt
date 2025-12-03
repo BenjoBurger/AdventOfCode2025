@@ -17,7 +17,7 @@ fun main() {
     val lengthOfLargest = largest.length
     val limit = largest.take(lengthOfLargest / 2).toLong()
     var curr = 1L
-    var currVal = 1L
+    var currVal: Long
     var i = 2
     var sum = 0L
     val visited = mutableMapOf<Long, Boolean>()
