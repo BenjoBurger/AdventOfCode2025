@@ -4,11 +4,11 @@ import java.io.File
 
 fun main() {
     var sum = 0
-    File("day3/test.txt").forEachLine { line ->
+    File("day3/input.txt").forEachLine { line ->
         val trimmed = line.trim()
         var first = trimmed[0]
-        var second = trimmed[1]
-        var i = 2
+        var second = '0'
+        var i = 1
         while (i < trimmed.length-1) {
             if (trimmed[i].digitToInt() > first.digitToInt()) {
                 first = trimmed[i]
@@ -26,5 +26,3 @@ fun main() {
     }
     println(sum)
 }
-
-// too low 17092
