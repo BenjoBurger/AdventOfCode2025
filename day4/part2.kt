@@ -3,7 +3,7 @@ package day4
 import java.io.File
 
 // Extension for Array<CharArray>
-class CharArrayGrid(private val data: Array<CharArray>) : Grid {
+private class CharArrayGrid(private val data: Array<CharArray>) : Grid {
     override val height: Int get() = data.size
     override val width: Int get() = data[0].size
     override fun get(x: Int, y: Int): Char = data[x][y]
