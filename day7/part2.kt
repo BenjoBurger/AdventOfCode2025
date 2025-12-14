@@ -11,9 +11,9 @@ fun main() {
             break
         }
     }
-    var currBeams: MutableMap<Int, Int> = mutableMapOf(pos to 1)
+    var currBeams: MutableMap<Int, Long> = mutableMapOf(pos to 1)
     for (level in 1..< input.size) {
-        val newBeams = mutableMapOf<Int, Int>()
+        val newBeams = mutableMapOf<Int, Long>()
         for (beamPos in currBeams.keys) {
             if (input[level][beamPos] == '^') {
                 newBeams[beamPos+1] = newBeams.getOrDefault(beamPos+1, 0) + currBeams[beamPos]!!
